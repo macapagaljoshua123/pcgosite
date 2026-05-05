@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Mail } from 'lucide-react';
+import { Cpu, Mail, MapPin } from 'lucide-react';
 
 const SocialIcon = ({ path, size = 20 }) => (
   <svg 
@@ -95,6 +95,10 @@ const Footer = () => {
           <div>
             <h4 style={{ marginBottom: '1.5rem', fontSize: '1.1rem', fontWeight: 700 }}>Contact</h4>
             <ul style={{ listStyle: 'none', color: 'hsl(var(--text-secondary))', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                <MapPin size={18} style={{ marginTop: '0.2rem', flexShrink: 0 }} />
+                <span>123 Tech Avenue, Silicon Valley, CA</span>
+              </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <Mail size={18} style={{ flexShrink: 0 }} />
                 <a href="mailto:contact@pceco.com" style={{ color: 'inherit', textDecoration: 'none' }}>contact@pceco.com</a>
