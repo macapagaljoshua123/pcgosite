@@ -119,7 +119,7 @@ const Checkout = () => {
                   <h3 style={{ marginBottom: '1.5rem' }}>Order Summary</h3>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {cart.map(item => (
-                      <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem' }}>
+                      <div key={item.product_id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem' }}>
                         <span style={{ color: 'hsl(var(--text-secondary))' }}>{item.name} x{item.quantity}</span>
                         <span>${(item.price * item.quantity).toFixed(2)}</span>
                       </div>

@@ -30,7 +30,7 @@ const Cart = () => {
           {cart.map((item) => (
             <motion.div 
               layout
-              key={item.id} 
+              key={item.product_id} 
               className="glass-card" 
               style={{ padding: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}
             >
@@ -42,12 +42,12 @@ const Cart = () => {
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '12px' }}>
-                <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="btn-secondary" style={{ padding: '0.3rem', borderRadius: '8px' }}><Minus size={16} /></button>
+                <button onClick={() => updateQuantity(item.product_id, item.quantity - 1)} className="btn-secondary" style={{ padding: '0.3rem', borderRadius: '8px' }}><Minus size={16} /></button>
                 <span style={{ minWidth: '20px', textAlign: 'center', fontWeight: 600 }}>{item.quantity}</span>
-                <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="btn-secondary" style={{ padding: '0.3rem', borderRadius: '8px' }}><Plus size={16} /></button>
+                <button onClick={() => updateQuantity(item.product_id, item.quantity + 1)} className="btn-secondary" style={{ padding: '0.3rem', borderRadius: '8px' }}><Plus size={16} /></button>
               </div>
 
-              <button onClick={() => removeFromCart(item.id)} style={{ color: 'hsl(var(--error))', background: 'transparent', border: 'none', cursor: 'pointer', padding: '0.5rem' }}>
+              <button onClick={() => removeFromCart(item.product_id)} style={{ color: 'hsl(var(--error))', background: 'transparent', border: 'none', cursor: 'pointer', padding: '0.5rem' }}>
                 <Trash2 size={20} />
               </button>
             </motion.div>
